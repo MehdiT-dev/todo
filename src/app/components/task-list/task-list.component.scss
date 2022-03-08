@@ -1,0 +1,64 @@
+#tasks-container {
+    margin: 30px auto;
+    width: 1000px;
+
+    h2 {
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 30px;
+    }
+
+    #new-task,
+    .task {
+        display: flex;
+        height: 50px;
+        margin: 10px 15px;
+
+        input {
+            flex-basis: 50px;
+            opacity: 0;
+            z-index: 2;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        
+        p {
+            line-height: 50px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 2px;
+                background-color: #000;
+                transform: translate(calc(-40px), 25px);
+            }
+        }
+
+        &.performed {
+            background-color: rgba(153, 255, 158, .5);
+            border-radius: 5px;
+        }
+    }
+
+    #new-task {
+        p::before {
+            content: '';
+                display: block;
+                width: 30px;
+                height: 2px;
+                background-color: #ff4949;
+                transform: translate(calc(-40px), 25px);
+        }
+        p::after {
+            content: '';
+                display: block;
+                width: 2px;
+                height: 30px;
+                background-color: #ff4949;
+                transform: translate(-25px, -40px);
+        }
+    }
+}

@@ -1,1 +1,21 @@
-<p>task-list works!</p>
+<div id="tasks-container">
+    <div id="pending-tasks">
+        <h2>Tâches en attente</h2>
+        <div class="task">
+            <input type="checkbox" name="" id="">
+            <p>Concevoir un prototype</p>
+        </div>
+        <div id="new-task">
+            <input (click)="onAddTask()" type="checkbox" name="" id="">
+            <p>Ajouter une tâche</p>
+        </div>
+    </div>
+    <div id="performed-tasks">
+        <h2>Tâches réalisées</h2>
+        <div class="task performed">
+            <input type="checkbox" name="" id="">
+            <p>Concevoir un prototype</p>
+        </div>
+        
+    </div>
+</div>
