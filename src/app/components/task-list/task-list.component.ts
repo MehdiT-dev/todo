@@ -14,9 +14,18 @@ export class TaskListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Gestion de la boîte modale personnalisée :
   onAddTask() {
-    let taskTitle = prompt('Veuillez attribuer une description à votre nouvelle tâche :');
-    // Création d'une nouvelle tâche via le constructeur avec pour description la réponse de l'utilisateur
+    const modalWindow : HTMLDivElement | null = document.querySelector('#new-task-modal');
+    console.log(modalWindow);
+    if (modalWindow != null) {
+      modalWindow.classList.add('visible');
+    }
+    // Gestion de la fermeture de la modale
+    // Récupération de la valeur du champ input
+    // Gestion du bouton de validation
+    // Création d'une nouvelle tâche via le constructeur avec pour titre la réponse de l'utilisateur
+    // Icone "Fermer la fenêtre + Animation de la modale à l'apparition
   }
 
 }
